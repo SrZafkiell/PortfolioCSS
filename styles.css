@@ -63,6 +63,18 @@ header .first-header{
     text-align: center;
 }
 
+.first-header-banner p.greeting {
+    padding: 10px;
+    background-color: rgb(14, 14, 14);
+    margin: 30px 550px;
+    border-radius: 5%;
+}
+.first-header-banner h1.greeting{
+    padding: 10px;
+    background-color: rgb(14, 14, 14);
+    margin: 30px 400px;
+}
+
 /* .first-header-banner h1 p{
     text-shadow: 0px 0px 30px rgb(8, 185, 255), 0 0 1em rgb(126, 253, 8), 0 30px 1em rgb(196, 6, 6);
 } */
@@ -324,6 +336,7 @@ ul.main-menu{
 .footer-main-socials ul, .footer-main-socials ul li {
     margin-top: 0;
     margin-left: 0;
+    margin-bottom: 5px;
     padding-left: 0;
     list-style: none;
 }
@@ -367,16 +380,16 @@ ul.main-menu{
 
 .footer-main-content{
     display: flex;
-    align-content: center;
-    flex-wrap: wrap;
-    justify-content: center;
-    flex-direction: column;
+    place-content: center;
+    flex-flow: column wrap;
     align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
 }
 
 .footer-main-patrons{
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-content: center;
     align-items: center;
     flex-wrap: wrap;
