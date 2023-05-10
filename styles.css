@@ -1,61 +1,219 @@
-body{
-    /* Web background background:url(https://images6.alphacoders.com/866/866625.png);  */
-    background-color: rgb(45, 10, 78);
-}
-
-header .first-header{
-    background-color: aqua;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
-header .first-header-content{
-    background-color: aquamarine;
-}
-header .first-header-content-left{
-    background-color: brown;
-    display: flex;
-    justify-content: flex-start;
-}
-header .first-header-content-right{
-    background-color: chartreuse;
-    display: flex;
-    justify-content: flex-end;
-    gap: 10px
-}
-
-header .first-header-content-right a{
-    margin: auto;
-}
-
-header .second-header{
-    background-color: firebrick;
-    margin: 30px -10px 10px -10px ;
-}
-
-header .second-header-menu{
-    background-color: crimson;
-}
-
-header .second-header-content{
-    background-color: darkviolet;
-}
-
+/* Neon effect for the logo of shown to the left */
 img.neon{
     border-color: rgb(23, 0, 85);
     -webkit-filter: drop-shadow(3px 3px 1px rgba(174, 0, 251, 0.5));
     filter: drop-shadow(0px 0px 7px rgba(174, 0, 251, 0.5), 0.5);
 }
 
+p {
+    color: rgb(181, 255, 217);
+}
+
+/* Neon effect for the titles using the class "neon" */
 h1.neon, h2.neon, h3.neon{
-    color: rgb(62, 0, 255);
+    color: rgb(0, 137, 145);
     border-radius: 5px;
     border-color: black;
-    text-shadow: 1px 3px 10px rgb(174, 0, 251);
+    text-shadow: 1px 3px 10px rgb(0, 173, 181);
+
+}
+h4.neon{
+    color: rgb(181, 255, 217);
+    border-radius: 5px;
+    border-color: black;
+    text-shadow: 1px 3px 10px rgb(0, 173, 181);
 
 }
 
-p {
-    color: rgb(181, 255, 217);
+/* BODY STYLES - Affects the whole page (Header, Main, Footer) */
+body{
+    /* Web background background:url(https://images6.alphacoders.com/866/866625.png);  */
+    background-color: rgb(34, 40, 49);
+    font-family: "Lucida Console", "Courier New", monospace;
+}
+
+/* START OF THE STYLES FOR (HEADER) */
+/* START OF THE STYLES OF THE FIRST HEADER (BANNER, LOGO AND AUTH, DYNAMIC INFO) */
+/* Banner styles */
+header.grid-container{
+    margin: -10px;
+}
+
+header .first-header{
+    /* Color that will get shown after adding the opacity to the banner 
+    This color will also be shown for the opacity of the logo and login/register menu*/
+    background-color: rgb(57, 62, 70);
+    /* Teacher: grid-template-columns: 1fr 1fr; */
+    display: grid;
+    grid-template-rows: 1fr 0.25fr 0.25fr;
+}
+
+.first-header-banner{
+    height: 200px;
+    background: url(https://www.techedgegroup.com/hubfs/2019%20-%20Information%20Technology/code-doctorzedge.jpg);
+    background-size: cover;
+    opacity: 70%;
+    text-align: center;
+}
+.first-header-banner h1.neon{
+    font-size: 3em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
+.first-header-banner h1.neon:hover{
+    color: rgb(1, 170, 179);
+    border-radius: 15px;
+    text-shadow: 1px 3px 10px rgb(0, 139, 146);
+    border-color: rgb(1, 74, 87);
+    -webkit-filter: drop-shadow(3px 3px 1px rgba(2, 92, 128, 0.623));
+    filter: drop-shadow(0px 0px 7px rgba(9, 141, 248, 0.5), 0.5);
+}
+header .first-header-content{
+    display: grid;
+    grid-template-columns: 50px 1fr auto;
+}
+/* This header contains the content for */
+header .first-header-content-left{
+    /* background-color: brown; */
+    height: 50px;
+    width: 50px;
+}
+/* This section will control the space of the "Login" and "Register" <a> */
+header .first-header-content-right{
+    /* Used for testing: background-color: chartreuse; */
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+    padding-right: 20px;
+    padding-left: 20px;
+    border-left: 2px;
+    border-radius: 0%;
+    border-top: 0;
+    border-bottom: 0;
+    border-right: 0;
+    border-color: rgb(36, 36, 36);
+    border-style: solid;
+}
+
+/* Size of the logo */
+header .first-header-content-left img{
+    width: 50px;
+    height: 50px;
+}
+
+/* Auth elements (Login/Register) */
+header .first-header-content-right a.auth{
+    font-size: 1em;
+    color: rgb(238, 238, 238);
+}
+
+header .first-header-information{
+    display: grid;
+    grid-row: 1fr;
+    background-color: rgb(34, 40, 49);
+}
+
+header .first-header-information p{
+    display: flex;
+    justify-content: center;
+}
+/* END OF THE STYLES OF THE FIRST HEADER (BANNER, LOGO AND AUTH, DYNAMIC INFO) */
+/* START OF THE STYLES OF THE SECOND HEADER (MENU, ) */
+header .second-header{
+    /* background-color: firebrick; */
+    /* padding: 5px; */
+    margin: 1em -10px 3em -10px ;
+}
+
+.main-menu-button{
+    display: flex;
+    align-items: center;
+    background-color: rgb(0, 173, 181);
+    border: none;
+    color: white;
+    padding: 12px 16px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 25% 0% 25% 0%;
+    position: relative;
+}
+
+.main-menu-button:hover{
+    background-color: rgb(1, 150, 158);
+    border-radius: 15% 0% 15% 0%;
+}
+
+.home-icon::before {
+    content: "";
+    display: inline-block;
+    background-image: url('https://cdn-icons-png.flaticon.com/512/25/25694.png');
+    background-size: contain;
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+
+.home-about::before {
+    content: "";
+    display: inline-block;
+    background-image: url('https://icons.veryicon.com/png/o/miscellaneous/member-circle-im/about-12.png');
+    background-size: contain;
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+.home-projects::before {
+    content: "";
+    display: inline-block;
+    background-image: url('https://static-00.iconduck.com/assets.00/code-tech-dev-icon-2048x1786-397qmt5y.png');
+    background-size: contain;
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+.home-contact::before {
+    content: "";
+    display: inline-block;
+    background-image: url('https://cdn-icons-png.flaticon.com/512/3095/3095583.png');
+    background-size: contain;
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+.home-resume::before {
+    content: "";
+    display: inline-block;
+    background-image: url('https://cdn-icons-png.flaticon.com/512/1358/1358533.png');
+    background-size: contain;
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+.home-github::before {
+    content: "";
+    display: inline-block;
+    background-image: url('https://cdn-icons-png.flaticon.com/512/25/25231.png');
+    background-size: contain;
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+.home-documentations::before {
+    content: "";
+    display: inline-block;
+    background-image: url('https://cdn-icons-png.flaticon.com/512/2991/2991106.png');
+    background-size: contain;
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+
+.second-header-menu a.menu-link{
+  text-decoration: none !important;
+  color: inherit !important;
 }
 
 ul{
@@ -65,7 +223,8 @@ ul{
     gap: 20px;
 }
 
-ul li a{
+
+/* ul li a{
     color: rgb(255, 255, 255);
     padding: 8px;
     border: 3px;
@@ -73,8 +232,67 @@ ul li a{
     border-color: black;
     border-radius: 25%;
     background-color: rgb(108, 6, 167);
-}
+} */
 
 ul li a:hover{
     background-color: rgb(126, 7, 196);
 }
+
+/* header .second-header-menu{
+    background-color: rgb(20, 157, 220);
+} */
+
+/* header .second-header-content{
+    background-color: darkviolet;
+} */
+
+/* END OF THE STYLES OF THE SECOND HEADER (MENU, ) */
+/* END OF THE STYLES FOR (HEADER) */
+
+/* START OF THE STYLES USED FOR THE <main> */
+
+.terminal-like-header{
+    background-color: rgb(26, 26, 26);
+    margin: 0px;
+    padding: 1px 0px 1px 30px;
+}
+
+.terminal-like-content{
+    background-color: rgb(14, 14, 14);
+    padding: 1em;
+    margin-bottom: 50px
+}
+
+.content-main{
+    margin-left: 10px;
+    margin-right: 10px;
+    /* background-color: black; */
+}
+
+.project-content{
+    display: grid;
+    grid-template-columns: 0.5fr 1fr;
+    background-color: rgb(20, 20, 20);
+}
+
+.project-content-image{
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.project-content-text{
+    display: flex;
+    margin: 20px;
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+
+.project-content-text-more-info-button {
+    display: flex;
+}
+
+/* END OF THE STYLES USED FOR THE <main> */
